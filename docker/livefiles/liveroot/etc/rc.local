@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "rc.local Script" 
+echo "$(date) rc.local" >> /logf
+#sleep 20
+/root/startuprc.sh &
+exit 0

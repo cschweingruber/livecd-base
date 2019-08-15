@@ -1,0 +1,6 @@
+#!/bin/sh
+echo "ks debug shell!"
+echo "starting shell"
+chvt 3
+/bin/sh >/dev/tty3 </dev/tty3 2>&1
+exit 0

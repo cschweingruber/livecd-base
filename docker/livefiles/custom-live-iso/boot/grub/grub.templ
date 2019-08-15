@@ -1,0 +1,6 @@
+menuentry "Grub LIVE ${LIVELABEL} ${LVEVERSION}" {
+	set gfxpayload=keep
+	linux	/casper/vmlinuz  file=/cdrom/preseed/ubuntu.seed boot=casper noquiet nosplash noprompt noeject
+	initrd	/casper/initrd
+}
+

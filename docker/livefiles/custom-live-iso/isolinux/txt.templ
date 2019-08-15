@@ -1,0 +1,5 @@
+
+label ${KSLABEL}
+  menu label ^LIVE (${KSLABEL}) ${KSVERSION} 
+  kernel /casper/vmlinuz
+  append  file=/cdrom/preseed/ubuntu.seed boot=casper initrd=/casper/initrd noquiet nosplash noprompt noeject ---
