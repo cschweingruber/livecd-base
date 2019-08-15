@@ -20,7 +20,7 @@ RUN mkdir -p /work/chroot && cd /work/chroot && \
     cd /work/chroot && \
     DEBOOTSTRAP_DIR=/work/chroot/debootstrap/ debootstrap/debootstrap --second-stage --second-stage-target=/work/chroot/ 
 
-COPY /livefiles/ksroot/prepiso.sh /work/chroot
+COPY /livefiles/liveroot/prepiso.sh /work/chroot
 
 RUN cat /etc/apt/sources.list |grep -v '^#' > /work/chroot/etc/apt/sources.list && \
     chroot /work/chroot /prepiso.sh
