@@ -23,7 +23,8 @@ cd /
 wget -nv http://archive.ubuntu.com/ubuntu/dists/bionic-updates/main/installer-amd64/current/images/netboot/mini.iso
 cd /custom-live-iso
 7z x -r /mini.iso boot
-mcopy -i boot/grub/efi.img -spm ::efi .
+# not needed
+#mcopy -i boot/grub/efi.img -spm ::efi .
 rm /mini.iso
 chmod 755 /custom-live-iso/boot/grub/x86_64-efi
 cp /bootloader/bios.img /custom-live-iso/boot/grub/bios.img
