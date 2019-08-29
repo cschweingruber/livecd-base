@@ -1,0 +1,16 @@
+
+if loadfont /boot/grub/font.pf2 ; then
+	set gfxmode=auto
+        if [ \$grub_platform == efi ]; then
+            insmod efi_gop
+            insmod efi_uga
+        fi
+	insmod gfxterm
+	terminal_output gfxterm
+fi
+
+set menu_color_normal=white/black
+set menu_color_highlight=black/light-gray
+set default=${LIVEDEFAULT}
+set timeout=5
+
