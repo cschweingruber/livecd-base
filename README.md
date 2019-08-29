@@ -21,7 +21,12 @@ Anleitung zum Builden:
     * generierung der initrd
 
 * Das ISO Verzeichnis /custom-live-iso
-    * wird mit den vorbereiteten Bootloadern isolinux und grub (für UEFI) ausgerüstet
+    * wird mit von inst-live.sh mit weiteren Komponenten angereichert
+    * gengrub.sh generiert den bios-bootloader und zieht den efi-bootloader aus der ubuntu mini.iso
+    * finalize.sh wird im live-system ausgeführt und generiert filesystem.manifest
+    
+* gensquasfs.sh erzeugt das komprimierte root-fs, kopiert kernel und initrd nach /custom-live-iso
 
 * geniso.sh generiert ISO-files
     * Sie liegen in /isos
+* die beiden letzten Kommandos werden erst beim docker run ausgeführt
