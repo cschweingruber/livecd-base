@@ -1,5 +1,5 @@
 FROM ubuntu:bionic
-MAINTAINER c.schweingruber@iet-gibb.ch
+MAINTAINER c.schweingruber@catatec.ch
 ARG DEBIAN_FRONTEND=noninteractive
 
 # prepare system for iso-builder
