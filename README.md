@@ -29,4 +29,4 @@ Anleitung zum Builden:
 
 * geniso.sh generiert ISO-files
     * Sie liegen in /isos
-* die beiden letzten Kommandos werden erst beim docker run ausgeführt
+* die beiden letzten Kommandos werden erst beim docker run ausgeführt.
