@@ -1,4 +1,4 @@
-FROM ubuntu:bionic
+FROM ubuntu:focal
 MAINTAINER c.schweingruber@catatec.ch
 ARG DEBIAN_FRONTEND=noninteractive
 
@@ -15,10 +15,9 @@ RUN apt-get update && \
 
 # instal base cd-system (stage 1 & 2)
 RUN mkdir -p /work/chroot && cd /work/chroot && \
-    debootstrap --foreign --arch=amd64 bionic /work/chroot && \
+    debootstrap --foreign --arch=amd64 focal /work/chroot && \
     sed -i '/setup_devices ()/a return 0' /work/chroot/debootstrap/functions && \
     sed -i '/setup_proc ()/a return 0' /work/chroot/debootstrap/functions && \
-    sed -i 's/rsyslog //' /work/chroot/debootstrap/base && \
     cd /work/chroot && \
     DEBOOTSTRAP_DIR=/work/chroot/debootstrap/ debootstrap/debootstrap --second-stage --second-stage-target=/work/chroot/ 
 

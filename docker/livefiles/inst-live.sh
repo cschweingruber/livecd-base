@@ -7,4 +7,5 @@ cd /work/chroot
 mv filesystem.manifest /custom-live-iso/casper
 rm prepiso.sh
 rm finalize.sh
-rm *.old
+rm boot/*.old
+exit 0

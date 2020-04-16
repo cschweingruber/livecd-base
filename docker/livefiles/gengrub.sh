@@ -20,7 +20,7 @@ cat /usr/lib/grub/i386-pc/cdboot.img /bootloader/core.img > /bootloader/bios.img
 
 # get signed uefi from ubuntu-mini.iso
 cd /
-wget -nv http://archive.ubuntu.com/ubuntu/dists/bionic-updates/main/installer-amd64/current/images/netboot/mini.iso
+wget -nv http://archive.ubuntu.com/ubuntu/dists/focal/main/installer-amd64/current/legacy-images/netboot/mini.iso
 cd /custom-live-iso
 7z x -r /mini.iso boot
 # not needed
